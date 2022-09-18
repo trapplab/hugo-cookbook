@@ -16,7 +16,7 @@
             <br>
                 <i class="fas fa-tags pr-2"></i>
                 {{ range $index, $element := $.Params.Tags }}
-               <a href="/tags/{{ $element }}">{{$element}}</a>
+               <a href="{{ printf "/tags/%s" $element  | urlize | relURL}}">{{$element}}</a>
                 {{ end }}
             <br>
             <i class="fas fa-calendar pr-4"></i>{{ .Date.Format "January 2006" }}

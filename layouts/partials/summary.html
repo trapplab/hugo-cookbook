@@ -14,15 +14,15 @@
         <div class="content">
             <p class="is-small">{{ $.Params.Tagline }}</p>
             <br>
-                <i class="fas fa-tags pr-2"></i>
-                {{ range $index, $element := $.Params.Tags }}
-               <a href="{{ printf "/tags/%s" $element  | urlize | relURL}}">{{$element}}</a>
-                {{ end }}
+            <i class="fas fa-tags pr-2"></i>
+            {{ range $index, $element := $.Params.Tags }}
+            <a href="{{ printf " /tags/%s" $element | urlize | relURL}}">{{$element}}</a>
+            {{ end }}
             <br>
             <i class="fas fa-calendar pr-4"></i>{{ .Date.Format "January 2006" }}
         </div>
         <div class="card-footer">
-            <a href="{{ .Permalink }}" class="card-footer-item button is-danger">View Recipe</a>
+            <a href="{{ .Permalink }}" class="card-footer-item button is-warning">View Recipe</a>
         </div>
     </div>
 </div>
